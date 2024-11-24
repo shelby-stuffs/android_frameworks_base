@@ -28,8 +28,8 @@ import android.os.Parcelable;
  * Information about a Keyboard Shortcut.
  */
 public final class KeyboardShortcutInfo implements Parcelable {
-    @Nullable private final CharSequence mLabel;
-    @Nullable private Icon mIcon;
+    private final CharSequence mLabel;
+    private final Icon mIcon;
     private final char mBaseCharacter;
     private final int mKeycode;
     private final int mModifiers;
@@ -113,15 +113,6 @@ public final class KeyboardShortcutInfo implements Parcelable {
     @Nullable
     public Icon getIcon() {
         return mIcon;
-    }
-
-    /**
-     * Removes an icon that was previously set.
-     *
-     * @hide
-     */
-    public void clearIcon() {
-        mIcon = null;
     }
 
     /**
